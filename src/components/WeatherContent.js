@@ -22,7 +22,7 @@ const WeatherContent = () => {
     const json = await response.json();
     setDays(json);
     weatherID = json.weather[0].id;
-    weatherID = 800
+    weatherID === 800
       ? setWeather(weatherGroup[0])
       : setWeather(weatherGroup[parseInt(weatherID / 100)]);
   };
